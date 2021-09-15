@@ -11,6 +11,9 @@ const content_submenu_nav_aside = document.querySelector(
   ".content_submenu_nav_aside"
 );
 const icon_drop = document.getElementById("icon_drop");
+const sub_menu_sub = document.querySelectorAll(".sub_menu_sub");
+const list_menu = document.querySelector(".active_sub_menu");
+
 /************ASIDE*****************/
 iconHamburguer.onclick = function () {
   logo.classList.toggle("resize_logo");
@@ -19,7 +22,6 @@ iconHamburguer.onclick = function () {
   userDates.classList.toggle("resize_user_dates");
   icon_drop.classList.toggle("resize_icon_drop");
   content_submenu_nav_aside.classList.toggle("resize_submenu");
-
   for (const textos of text_aside) {
     textos.classList.toggle("resize_text");
   }
@@ -35,6 +37,21 @@ for (let i = 0; i < subMenuBtn.length; i++) {
     } else {
       subMenu.classList.add("desplegar");
       subMenu.style.height = heigtSubMenu + "px";
+    }
+  });
+}
+for (let i = 0; i < sub_menu_sub.length; i++) {
+  sub_menu_sub[i].addEventListener("click", function () {
+    const subMenuSub = this.nextElementSibling;
+    const heigtSubMenuSub = subMenuSub.scrollHeight;
+    if (subMenuSub.classList.contains("desplegarSub")) {
+      subMenuSub.classList.remove("desplegarSub");
+      subMenuSub.removeAttribute("style");
+      list_menu.classList.remove("activa_menu");
+    } else {
+      subMenuSub.classList.add("desplegarSub");
+      subMenuSub.style.height = heigtSubMenuSub + "px";
+      list_menu.classList.add("activa_menu");
     }
   });
 }
