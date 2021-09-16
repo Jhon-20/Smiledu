@@ -12,11 +12,11 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  /********************************************
+                  ESTILOS GENERALES
+    *********************************************/
 }
 .container .content {
-  /********************************************
-                ESTILOS GENERALES
-  *********************************************/
   /***************************************
                      ASIDE
   **************************************/
@@ -256,7 +256,7 @@ body {
   position: relative;
   width: calc(100% - 18rem);
   margin-left: 18em;
-  flex-direction: column;
+  flex-direction: row;
   transition: all 0.2s;
   min-height: 100vh;
   overflow: hidden;
@@ -266,7 +266,7 @@ body {
   margin-left: 4.25rem;
 }
 .container .content main .header_main {
-  padding: 2rem 20px;
+  padding: 2rem 10px;
   display: grid;
   grid-template-columns: 6fr 1fr;
   grid-template-rows: repeat(2, 1fr);
@@ -278,7 +278,7 @@ body {
   justify-content: flex-end;
 }
 .container .content main .header_main .header_icons span {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .container .content main .header_main .header_icons span img {
   cursor: pointer;
@@ -288,11 +288,12 @@ body {
   font-weight: 400;
 }
 .container .content main .contnet_panel_collapse {
-  width: 340px;
+  width: 20rem;
   padding: 1rem 20px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  position: absolute;
 }
 .container .content main .contnet_panel_collapse .panel_search {
   width: 100%;
@@ -340,7 +341,7 @@ body {
 }
 .container .content main .contnet_panel_collapse .text_filter span {
   display: flex;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 .container .content main .contnet_panel_collapse .text_filter span p {
   text-transform: uppercase;
@@ -440,6 +441,107 @@ body {
 .container .content main .contnet_panel_collapse .content_anho_lectivo .icons_anho span {
   cursor: pointer;
   margin-left: 1em;
+}
+.container .content main .content_informacion {
+  width: calc(90% - 20rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  position: relative;
+  margin-top: -4rem;
+  padding: 0 20px;
+}
+.container .content main .content_informacion .main_informacion {
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14), 0 2px 16px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.container .content main .content_informacion .main_informacion .content_navegacion_tabs .navegacion_tabs {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #adadad;
+}
+.container .content main .content_informacion .main_informacion .content_navegacion_tabs .navegacion_tabs li {
+  list-style: none;
+  padding-top: 10px;
+}
+.container .content main .content_informacion .main_informacion .content_navegacion_tabs .navegacion_tabs li:hover {
+  background-color: #f4f8f9;
+}
+.container .content main .content_informacion .main_informacion .content_navegacion_tabs .navegacion_tabs li button {
+  width: 100%;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  padding-bottom: 10px;
+  background: none;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+.container .content main .content_informacion .main_informacion .content_navegacion_tabs .navegacion_tabs li button.active_button_tab {
+  color: #ffd608;
+  border-bottom: 3px solid #3283dfb9;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion h4 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #adadad;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__title {
+  padding: 0.8rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -1px 0 #adadad inset;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__title.active {
+  box-shadow: none;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__title:hover {
+  background-color: #f4f8f9;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__title i {
+  float: right;
+  transition: transform 0.3s;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__title.active i {
+  transform: rotate(90deg);
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__content {
+  padding: 0 1rem;
+  line-height: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.container .content main .content_informacion .main_informacion .main_acordeon .accordion__content.active {
+  padding: 1rem;
+  line-height: 1.4;
+  opacity: 1;
+}
+.container .content main .button_add {
+  position: absolute;
+  right: 0;
+  margin-right: 3em;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #2196f3;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 7rem;
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14), 0 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.container .content main .button_add span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

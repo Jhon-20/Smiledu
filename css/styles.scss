@@ -20,10 +20,11 @@ body {
   height: 100vh;
 
   overflow: hidden;
-  .content {
-    /********************************************
+
+  /********************************************
                   ESTILOS GENERALES
     *********************************************/
+  .content {
     .section_aside,
     .one_section_aside,
     .two_section_aside,
@@ -289,7 +290,7 @@ body {
       position: relative;
       width: calc(100% - 18rem);
       margin-left: 18em;
-      flex-direction: column;
+      flex-direction: row;
       transition: all 0.2s;
       min-height: 100vh;
       overflow: hidden;
@@ -298,7 +299,7 @@ body {
         margin-left: 4.25rem;
       }
       .header_main {
-        padding: 2rem 20px;
+        padding: 2rem 10px;
         display: grid;
         grid-template-columns: 6fr 1fr;
         grid-template-rows: repeat(2, 1fr);
@@ -309,7 +310,7 @@ body {
           display: flex;
           justify-content: flex-end;
           span {
-            margin-right: 1rem;
+            margin-left: 1rem;
             img {
               cursor: pointer;
             }
@@ -321,12 +322,12 @@ body {
         }
       }
       .contnet_panel_collapse {
-        width: 340px;
+        width: 20rem;
         padding: 1rem 20px;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
-
+        position: absolute;
         .panel_search {
           width: 100%;
 
@@ -374,7 +375,7 @@ body {
           color: $color-icons;
           span {
             display: flex;
-            font-size: 0.9em;
+            font-size: 0.8em;
             p {
               text-transform: uppercase;
               margin-left: 0.1rem;
@@ -482,6 +483,122 @@ body {
               margin-left: 1em;
             }
           }
+        }
+      }
+      .content_informacion {
+        width: calc(90% - 20rem);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20rem;
+        position: relative;
+        margin-top: -4rem;
+        padding: 0 20px;
+        .main_informacion {
+          box-shadow: 0 4px 5px -2px rgb(0 0 0 / 20%),
+            0 7px 10px 1px rgb(0 0 0 / 14%), 0 2px 16px 1px rgb(0 0 0 / 12%);
+          border-radius: 5px;
+          background-color: $color-principal;
+          .content_navegacion_tabs {
+            .navegacion_tabs {
+              display: flex;
+              justify-content: flex-start;
+              width: 100%;
+              border-bottom: 1px solid $borde_panel_collapse;
+              li {
+                list-style: none;
+                padding-top: 10px;
+
+                &:hover {
+                  background-color: $color-main;
+                }
+                button {
+                  width: 100%;
+                  border: none;
+                  padding: 0 10px;
+                  outline: none;
+                  padding-bottom: 10px;
+                  background: none;
+                  cursor: pointer;
+                  font-family: $fuente-principal;
+                  &.active_button_tab {
+                    color: #ffd608;
+                    border-bottom: 3px solid #3283dfb9;
+                  }
+                }
+              }
+            }
+          }
+          .main_acordeon {
+            .accordion {
+              h4 {
+                font-weight: 400;
+                font-size: 0.9rem;
+                color: $borde_panel_collapse;
+              }
+            }
+
+            .accordion__title {
+              padding: 0.8rem 1rem;
+              background-color: #ffffff;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+              box-shadow: 0 -1px 0 $borde_panel_collapse inset;
+              overflow: hidden;
+              cursor: pointer;
+              transition: background-color 0.3s;
+
+              &.active {
+                box-shadow: none;
+              }
+              &:hover {
+                background-color: $color-main;
+              }
+
+              i {
+                float: right;
+                transition: transform 0.3s;
+              }
+
+              &.active i {
+                transform: rotate(90deg);
+              }
+            }
+
+            .accordion__content {
+              padding: 0 1rem;
+              line-height: 0;
+              background-color: #ffffff;
+              overflow: hidden;
+              opacity: 0;
+              transition: all 0.3s;
+
+              &.active {
+                padding: 1rem;
+                line-height: 1.4;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .button_add {
+        position: absolute;
+        right: 0;
+        margin-right: 3em;
+        width: 50px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: #2196f3;
+        border-radius: 50%;
+        cursor: pointer;
+        top: 7rem;
+        box-shadow: 0 4px 5px -2px rgb(0 0 0 / 20%),
+          0 7px 10px 1px rgb(0 0 0 / 14%), 0 2px 16px 1px rgb(0 0 0 / 12%);
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
