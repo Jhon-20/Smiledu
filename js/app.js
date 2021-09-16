@@ -13,6 +13,8 @@ const content_submenu_nav_aside = document.querySelector(
 const icon_drop = document.getElementById("icon_drop");
 const sub_menu_sub = document.querySelectorAll(".sub_menu_sub");
 const list_menu = document.querySelector(".active_sub_menu");
+let iconButtonAdd = document.querySelector(".button_add");
+
 
 /************ASIDE*****************/
 iconHamburguer.onclick = function () {
@@ -65,15 +67,18 @@ for (let i = 0; i < accordionTitle.length; i++) {
 
   title.addEventListener("click", () => {
     const index = i;
-
     accordionTitle[index].classList.toggle("active");
     accordionContent[index].classList.toggle("active");
-
     for (let f = 0; f < accordionTitle.length; f++) {
       if (f !== i) {
         accordionTitle[f].classList.remove("active");
         accordionContent[f].classList.remove("active");
+
       }
     }
   });
 }
+iconButtonAdd.onclick = function () {
+  iconButtonAdd.classList.toggle("active_button_add");
+  document.querySelector(".box_button_icons").classList.toggle("active_icons_button");
+};

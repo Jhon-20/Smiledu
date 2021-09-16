@@ -148,7 +148,7 @@
                           ><img src="assets/icons/iconDrop.svg" alt=""
                         /></span>
                       </button>
-                      <ul class="content_submenu_nav_aside">
+                      <ul class="content_submenu_nav_aside colapse">
                         <li class="list_submenu">
                           <a href="#">Estudiantes</a>
                         </li>
@@ -243,7 +243,7 @@
                       /></span>
                     </div>
                   </button>
-                  <ul class="content_submenu_nav_aside content_submenu">
+                  <ul class="content_submenu_nav_aside colapse content_submenu">
                     <li class="list_submenu">
                       <button class="items_desplegable sub_menu button_submenu">
                         3añ. Inicial
@@ -290,7 +290,20 @@
                       </ul>
                     </li>
                     <li class="list_submenu">
-                      <a href="#">Estudiantes</a>
+                      <button class="items_desplegable sub_menu button_submenu">
+                        2° Primaria
+                        <span class="icon_drop" id="icon_drop"
+                          ><img src="assets/icons/iconDrop.svg" alt=""
+                        /></span>
+                      </button>
+                    </li>
+                    <li class="list_submenu">
+                      <button class="items_desplegable sub_menu button_submenu">
+                        3° Primaria
+                        <span class="icon_drop" id="icon_drop"
+                          ><img src="assets/icons/iconDrop.svg" alt=""
+                        /></span>
+                      </button>
                     </li>
                   </ul>
                 </li>
@@ -303,86 +316,171 @@
               </div>
             </div>
           </section>
-          <section class="content_informacion">
-            <section class="main_informacion">
-              <nav class="content_navegacion_tabs">
-                <ul class="navegacion_tabs">
-                  <li>
-                    <button class="active_button_tab">Información</button>
-                  </li>
-                  <li><button>Ficha médica</button></li>
-                  <li><button>Ficha psicológica</button></li>
-                  <li><button>Compromisos</button></li>
-                </ul>
-              </nav>
-              <div class="main_acordeon">
-                <div class="accordion">
-                  <div class="accordion__item">
-                    <h4 class="accordion__title">
-                      Personal <i class="fas fa-angle-right"></i>
-                    </h4>
-                    <article class="accordion__content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Obcaecati, quisquam modi enim vel odio
-                        exercitationem dolor provident, et, expedita cumque
-                        perferendis culpa inventore laudantium ducimus nesciunt
-                        suscipit esse sapiente? Quo.
-                      </p>
-                    </article>
-                  </div>
+          <section class="container_informacion">
+            <section class="content_informacion">
+              <section class="main_informacion">
+                <nav class="content_navegacion_tabs">
+                  <ul class="navegacion_tabs">
+                    <li>
+                      <button class="active_button_tab">Información</button>
+                    </li>
+                    <li><button>Ficha médica</button></li>
+                    <li><button>Ficha psicológica</button></li>
+                    <li><button>Compromisos</button></li>
+                  </ul>
+                </nav>
+                <div class="main_acordeon">
+                  <div class="accordion">
+                    <div class="accordion__item">
+                      <h4 class="accordion__title">
+                        Personal <i class="fas fa-angle-right"></i>
+                      </h4>
+                      <article class="accordion__content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Obcaecati, quisquam modi enim vel odio
+                          exercitationem dolor provident, et, expedita cumque
+                          perferendis culpa inventore laudantium ducimus
+                          nesciunt suscipit esse sapiente? Quo.
+                        </p>
+                      </article>
+                    </div>
 
-                  <div class="accordion__item">
-                    <h4 class="accordion__title">
-                      Contacto <i class="fas fa-angle-right"></i>
-                    </h4>
-                    <article class="accordion__content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Obcaecati, quisquam modi enim vel odio
-                        exercitationem dolor provident, et, expedita cumque
-                        perferendis culpa inventore laudantium ducimus nesciunt
-                        suscipit esse sapiente? Quo.
-                      </p>
-                    </article>
-                  </div>
+                    <div class="accordion__item">
+                      <h4 class="accordion__title">
+                        Contacto <i class="fas fa-angle-right"></i>
+                      </h4>
+                      <article class="accordion__content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Obcaecati, quisquam modi enim vel odio
+                          exercitationem dolor provident, et, expedita cumque
+                          perferendis culpa inventore laudantium ducimus
+                          nesciunt suscipit esse sapiente? Quo.
+                        </p>
+                      </article>
+                    </div>
 
-                  <div class="accordion__item">
-                    <h4 class="accordion__title">
-                      Datos de privacidad <i class="fas fa-angle-right"></i>
-                    </h4>
-                    <article class="accordion__content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Obcaecati, quisquam modi enim vel odio
-                        exercitationem dolor provident, et, expedita cumque
-                        perferendis culpa inventore laudantium ducimus nesciunt
-                        suscipit esse sapiente? Quo.
-                      </p>
-                    </article>
-                  </div>
+                    <div class="accordion__item">
+                      <h4 class="accordion__title">
+                        Datos de privacidad <i class="fas fa-angle-right"></i>
+                      </h4>
+                      <article class="accordion__content">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Obcaecati, quisquam modi enim vel odio
+                          exercitationem dolor provident, et, expedita cumque
+                          perferendis culpa inventore laudantium ducimus
+                          nesciunt suscipit esse sapiente? Quo.
+                        </p>
+                      </article>
+                    </div>
 
-                  <div class="accordion__item">
-                    <h4 class="accordion__title">
-                      Adicional <i class="fas fa-angle-right"></i>
-                    </h4>
-                    <article class="accordion__content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Obcaecati, quisquam modi enim vel odio
-                        exercitationem dolor provident, et, expedita cumque
-                        perferendis culpa inventore laudantium ducimus nesciunt
-                        suscipit esse sapiente? Quo.
-                      </p>
-                    </article>
+                    <div class="accordion__item">
+                      <h4 class="accordion__title">
+                        Adicional <i class="fas fa-angle-right"></i>
+                      </h4>
+                      <article class="accordion__content">
+                        <div class="box_items_acodeon">
+                          <div class="container_button school">
+                            <button
+                              class="
+                                items_desplegable
+                                sub_menu
+                                select_button_school
+                              "
+                            >
+                              <span> Selecc. colegio de referencia </span>
+                              <span class="icon_drop" id="icon_drop"
+                                ><img src="assets/icons/iconDrop.svg" alt=""
+                              /></span>
+                            </button>
+                            <div class="buton_combo">
+                              <span class="button_icons_desplegable"
+                                ><img
+                                  src="assets/icons/iconButtonPen.svg"
+                                  alt=""
+                              /></span>
+                            </div>
+                          </div>
+                          <div class="container_button region">
+                            <button
+                              class="
+                                items_desplegable
+                                sub_menu
+                                select_button_school
+                              "
+                            >
+                              <span> Selecc. Region </span>
+                              <span class="icon_drop" id="icon_drop"
+                                ><img src="assets/icons/iconDrop.svg" alt=""
+                              /></span>
+                            </button>
+                          </div>
+                          <div class="pregunt one_pregunt">
+                            <p>¿Quienes pueden recoger al estudiante?</p>
+                            <div class="add_responsable one_responsable">
+                              <div class="buton_combo">
+                                <span class="button_icons_desplegable"
+                                  ><img
+                                    src="assets/icons/iconUserAdd.svg"
+                                    alt=""
+                                /></span>
+                              </div>
+                              <p>Agregar responsables(3 max.)</p>
+                            </div>
+                          </div>
+                          <div class="pregunt two_pregunt">
+                            <p>¿Cómo se regresará a casa el estudiante?</p>
+                            <div class="add_responsable two_responsable">
+                              <div class="container_button school">
+                                <button
+                                  class="
+                                    items_desplegable
+                                    sub_menu
+                                    select_button_school
+                                  "
+                                >
+                                  <span> Selecc. colegio de referencia </span>
+                                  <span class="icon_drop" id="icon_drop"
+                                    ><img
+                                      src="assets/icons/iconDrop.svg"
+                                      alt=""
+                                  /></span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </div>
+              </section>
+            </section>
+            <section class="content_button_add">
+              <button class="button_add">
+                <span><img src="assets/icons/iconButtonAdd.svg" alt="" /></span>
+              </button>
+              <div class="box_button_icons">
+                <span class="button_icons_desplegable"
+                  ><img src="assets/icons/iconButtonPen.svg" alt=""
+                /></span>
+                <span class="button_icons_desplegable"
+                  ><img src="assets/icons/iconButtonRows.svg" alt=""
+                /></span>
+                <span class="button_icons_desplegable"
+                  ><img src="assets/icons/iconButtonTop.svg" alt=""
+                /></span>
+                <span class="button_icons_desplegable"
+                  ><img src="assets/icons/iconButtonTop.svg" alt=""
+                /></span>
+                <span class="button_icons_desplegable"
+                  ><img src="assets/icons/iconButtonRowDown.svg" alt=""
+                /></span>
               </div>
             </section>
           </section>
-          <button class="button_add">
-            <span><img src="assets/icons/iconButtonAdd.svg" alt="" /></span>
-          </button>
         </main>
       </div>
     </div>
