@@ -82,6 +82,9 @@ body {
           &.colapse {
             overflow: hidden;
           }
+          &.desplegar {
+            overflow: visible;
+          }
           &.resize_submenu {
             display: none;
           }
@@ -116,7 +119,7 @@ body {
       height: 40px;
       background-color: $color-principal;
       border-radius: 50%;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -126,6 +129,12 @@ body {
 
         align-items: center;
       }
+    }
+    .button_details {
+      outline: none;
+      background: transparent;
+      padding: 5px 1em;
+      border-radius: 30px;
     }
     /***************************************
                        ASIDE
@@ -442,29 +451,22 @@ body {
             .content_submenu {
               width: 100%;
               margin-left: 0;
-
-              // &::-webkit-scrollbar {
-              //   width: 2px;
-              // }
-              // &::-webkit-scrollbar-thumb {
-              //   background: $color-icons;
-              //   border-radius: 5px;
-              // }
               .list_submenu {
                 border: 1px solid $color-icons;
                 border-radius: 10px;
                 margin-bottom: $margin-botton-panel;
                 flex-direction: column;
-                overflow: hidden;
+
                 &.active_sub_menu {
+                  overflow: hidden !important;
                   &.activa_menu {
                     background-color: $color-principal;
                     border: none;
                     box-shadow: $shadow;
                     border-radius: 10px;
                     padding: 1rem 0;
-                    box-sizing: border-box;
-                    overflow: visible;
+
+                    overflow: visible !important;
                   }
                 }
                 .sub_menu_modal {
@@ -509,26 +511,159 @@ body {
         position: relative;
         display: grid;
         position: relative;
+        height: 900px;
         grid-template-columns: 11fr 1fr;
         .content_informacion {
           height: 100%;
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: 1fr 3fr;
           margin-left: 20rem;
           position: relative;
           margin-top: -4rem;
+          box-shadow: $shadow;
+          border-radius: 5px;
+          background-color: $color-principal;
+          height: 100%;
+          .collapse_informacion {
+            height: 100%;
+            // box-shadow: $shadow;
+            .content_colpse_details {
+              padding: 10px;
+              background-color: $color-principal;
+              .avatar_colapse {
+                padding: 0;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: $margin-botton-panel;
+                .content_avatar {
+                  display: flex;
+                  .user_avatar {
+                    font-size: 0.8rem;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-left: 0.5rem;
+                    h4 {
+                      font-weight: 400;
+                    }
+                  }
+                }
+                .icon_label {
+                  cursor: pointer;
+                }
+              }
+              .title_student {
+                p {
+                  color: $color-icons;
+                  font-size: 0.9rem;
+                  margin-bottom: 0.8rem;
+                }
+              }
+              .dates_students,
+              .matricula,
+              .brothers,
+              .family {
+                color: $borde_panel_collapse;
+                margin-bottom: $margin-botton-panel;
+              }
+              .dates_students {
+                .item_dates {
+                  list-style: none;
+                  font-size: 0.8rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 5px 0;
 
+                  .student {
+                    color: #0051ff;
+                    border: 1px solid #0051ff;
+                  }
+                }
+              }
+              .matricula {
+                .matricula_details {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  margin-bottom: $margin-botton-panel;
+                  p {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0.5rem;
+                    justify-content: center;
+                    font-size: 0.8em;
+                  }
+                }
+                .matricula_school {
+                  display: grid;
+                  grid-template-columns: 2fr 1fr;
+                  align-content: center;
+                  align-items: center;
+
+                  .name {
+                    p {
+                      font-size: 0.8rem;
+                      &.mayuscula {
+                        text-transform: uppercase;
+                        margin-bottom: 0.4rem;
+                      }
+                    }
+                  }
+                  .icon_matricula {
+                    display: flex;
+                    justify-content: flex-end;
+                    span {
+                      cursor: pointer;
+                      margin-left: 1rem;
+                    }
+                  }
+                  .aulas {
+                    margin-top: $margin-botton-panel;
+                    color: #ffd600;
+                    border: 1px solid #ffd600;
+                    width: 140px;
+                  }
+                }
+              }
+
+              .brothers {
+                .content_images_icon {
+                  display: flex;
+                  align-items: center;
+                  .add_image_brother {
+                    margin-left: 1rem;
+                  }
+                }
+              }
+              .images_brothers,
+              .images_family {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                span {
+                  width: 32px;
+                  height: 32px;
+
+                  img {
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
           .main_informacion {
-            box-shadow: $shadow;
-            border-radius: 5px;
             background-color: $color-principal;
+            border-left: 1px solid $borde_panel_collapse;
+            // margin-left: 15rem;
             .content_navegacion_tabs {
               .navegacion_tabs {
                 display: flex;
                 justify-content: flex-start;
                 width: 100%;
                 border-bottom: 1px solid $borde_panel_collapse;
-
+                position: relative;
                 li {
                   list-style: none;
                   padding-top: 10px;
@@ -554,6 +689,7 @@ body {
               }
             }
             .main_acordeon {
+              position: absolute;
               .accordion {
                 h4 {
                   font-weight: 400;
