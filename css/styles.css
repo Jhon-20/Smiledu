@@ -492,7 +492,7 @@ body {
   box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14), 0 2px 16px 1px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   background-color: #ffffff;
-  height: 900px;
+  height: 850px;
 }
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details {
   position: relative;
@@ -784,6 +784,7 @@ body {
   padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
+  margin-bottom: 0;
 }
 .container .content main .container_informacion .content_informacion .main_informacion .main_acordeon .accordion__content .box_items_acodeon .container_button li.lista_religion .submenu_combo_desplegable li:hover {
   background-color: rgba(182, 182, 182, 0.11);

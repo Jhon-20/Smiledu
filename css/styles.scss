@@ -540,7 +540,7 @@ body {
           box-shadow: $shadow;
           border-radius: 5px;
           background-color: $color-principal;
-          height: 900px;
+          height: 850px;
           .collapse_informacion {
             // box-shadow: $shadow;
             .content_colpse_details {
@@ -853,6 +853,7 @@ body {
                             padding: 10px 10px;
                             border-radius: 10px;
                             cursor: pointer;
+                            margin-bottom: 0;
                             &:hover {
                               background-color: $aside_hover;
                             }
