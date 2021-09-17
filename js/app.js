@@ -10,12 +10,14 @@ const subMenuBtn = document.querySelectorAll(".sub_menu");
 const content_submenu_nav_aside = document.querySelector(
   ".content_submenu_nav_aside"
 );
+const colapse = document.getElementById("colapse")
 const icon_drop = document.getElementById("icon_drop");
 const sub_menu_sub = document.querySelectorAll(".sub_menu_sub");
 const list_menu = document.querySelector(".active_sub_menu");
 let iconButtonAdd = document.querySelector(".button_add");
-
-
+const iconLabel = document.getElementById("icon_label")
+const religion = document.querySelectorAll(".religion")
+const listaReligion = document.querySelector(".lista_religion");
 /************ASIDE*****************/
 iconHamburguer.onclick = function () {
   logo.classList.toggle("resize_logo");
@@ -39,6 +41,10 @@ for (let i = 0; i < subMenuBtn.length; i++) {
     } else {
       subMenu.classList.add("desplegar");
       subMenu.style.height = heigtSubMenu + "px";
+      setTimeout(() => {
+        subMenu.style.overflow = "visible"
+      }, 100);
+
     }
   });
 }
@@ -82,3 +88,24 @@ iconButtonAdd.onclick = function () {
   iconButtonAdd.classList.toggle("active_button_add");
   document.querySelector(".box_button_icons").classList.toggle("active_icons_button");
 };
+/***************ACTIVAR POPPUS DETALLE*****************/
+iconLabel.addEventListener("click", () => {
+  document.querySelector(".detail_poppup").classList.toggle("active_poppup_details")
+})
+
+/****************ACTIVA SUBMENUS COMBOS*****************/
+for (let i = 0; i < religion.length; i++) {
+  religion[i].addEventListener("click", function () {
+    const subMenuCombo = this.nextElementSibling;
+    const heigtSubMenuCombo = subMenuCombo.scrollHeight;
+    if (subMenuCombo.classList.contains("desplegar_combo")) {
+      subMenuCombo.classList.remove("desplegar_combo");
+      subMenuCombo.removeAttribute("style");
+      listaReligion.classList.remove("activa_submenu_combo");
+    } else {
+      subMenuCombo.classList.add("desplegar_combo");
+      subMenuCombo.style.height = heigtSubMenuCombo + "px";
+      listaReligion.classList.add("activa_submenu_combo");
+    }
+  });
+}

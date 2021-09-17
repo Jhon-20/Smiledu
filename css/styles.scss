@@ -48,7 +48,7 @@ body {
       position: relative;
       display: flex;
       align-items: center;
-      padding: 12px 1.25rem;
+      padding: 8px 1.25rem;
       color: $color-icons;
       border: none;
       outline: none;
@@ -74,44 +74,45 @@ body {
         .item_icon_link {
           cursor: pointer;
         }
-        .content_submenu_nav_aside {
-          width: 80%;
-          height: 0;
-          margin-left: 15%;
-          transition: all 0.3s;
-          &.colapse {
-            overflow: hidden;
-          }
-          &.desplegar {
-            overflow: visible;
-          }
-          &.resize_submenu {
-            display: none;
-          }
-          .list_submenu {
+
+        &.resize_submenu {
+          display: none;
+        }
+        .list_submenu {
+          width: 100%;
+          display: flex;
+          list-style: none;
+          // background-color: black;
+          .button_submenu {
+            cursor: pointer;
             width: 100%;
-            display: flex;
-            list-style: none;
-            // background-color: black;
-            .button_submenu {
-              cursor: pointer;
-              width: 100%;
-              justify-content: space-between;
-            }
-            a {
-              text-decoration: none;
-              padding: 1rem;
-              width: 100%;
-              height: 100%;
-              color: $color-icons;
-              &:hover {
-                border-radius: 30px;
-                background-color: $aside_hover;
-                color: #fed918;
-              }
+            justify-content: space-between;
+          }
+          a {
+            text-decoration: none;
+            padding: 1rem;
+            width: 100%;
+            height: 100%;
+            color: $color-icons;
+            &:hover {
+              border-radius: 30px;
+              background-color: $aside_hover;
+              color: #fed918;
             }
           }
         }
+      }
+    }
+    .premium_collage {
+      text-transform: uppercase;
+    }
+    .content_submenu_nav_aside {
+      width: 80%;
+      height: 0;
+      margin-left: 15%;
+      transition: all 0.3s;
+      &.colapse {
+        overflow: hidden;
       }
     }
     .buton_combo {
@@ -126,7 +127,6 @@ body {
       cursor: pointer;
       span {
         display: flex;
-
         align-items: center;
       }
     }
@@ -135,6 +135,24 @@ body {
       background: transparent;
       padding: 5px 1em;
       border-radius: 30px;
+      cursor: pointer;
+    }
+    .button_hover {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      &:hover {
+        background-color: $aside_hover;
+        border-radius: 50%;
+      }
+    }
+    .hover_shadow {
+      &:hover {
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
+      }
     }
     /***************************************
                        ASIDE
@@ -326,7 +344,7 @@ body {
         margin-left: 4.25rem;
       }
       .header_main {
-        padding: 2rem 10px;
+        padding: 1.5rem 10px;
         display: grid;
         grid-template-columns: 6fr 1fr;
         grid-template-rows: repeat(2, 1fr);
@@ -405,8 +423,10 @@ body {
             display: flex;
             font-size: 0.8em;
             p {
-              text-transform: uppercase;
               margin-left: 0.1rem;
+              &.premium_collage {
+                text-transform: uppercase;
+              }
             }
           }
         }
@@ -465,7 +485,6 @@ body {
                     box-shadow: $shadow;
                     border-radius: 10px;
                     padding: 1rem 0;
-
                     overflow: visible !important;
                   }
                 }
@@ -499,10 +518,9 @@ body {
             justify-content: flex-end;
             align-items: center;
             top: 0;
-            padding: 10px 0;
+            padding: 7px 0;
             span {
               cursor: pointer;
-              margin-left: 1em;
             }
           }
         }
@@ -511,10 +529,9 @@ body {
         position: relative;
         display: grid;
         position: relative;
-        height: 900px;
+
         grid-template-columns: 11fr 1fr;
         .content_informacion {
-          height: 100%;
           display: grid;
           grid-template-columns: 1fr 3fr;
           margin-left: 20rem;
@@ -523,13 +540,14 @@ body {
           box-shadow: $shadow;
           border-radius: 5px;
           background-color: $color-principal;
-          height: 100%;
+          height: 900px;
           .collapse_informacion {
-            height: 100%;
             // box-shadow: $shadow;
             .content_colpse_details {
+              position: relative;
               padding: 10px;
               background-color: $color-principal;
+              border-radius: 5px;
               .avatar_colapse {
                 padding: 0;
                 width: 100%;
@@ -625,7 +643,6 @@ body {
                   }
                 }
               }
-
               .brothers {
                 .content_images_icon {
                   display: flex;
@@ -651,12 +668,56 @@ body {
                   }
                 }
               }
+              .detail_poppup {
+                width: 85%;
+                position: absolute;
+                top: 45px;
+                right: 20px;
+                background-color: $color-principal;
+                box-shadow: $shadow;
+                border-radius: 5px;
+                padding: 10px 0;
+                z-index: -1;
+                transition: all 0.2s;
+                opacity: 0;
+                &.active_poppup_details {
+                  visibility: visible;
+                  z-index: 1;
+                  opacity: 1;
+                }
+                li {
+                  .button_poppup {
+                    &:hover {
+                      background-color: $aside_hover;
+                      border-radius: 5px;
+                    }
+                    padding: 12px 5px;
+                    .icon_details_poppup {
+                      width: 24px;
+                      height: 24px;
+                      filter: grayscale(100%);
+                      img {
+                        width: 100%;
+                        height: 100%;
+                      }
+                    }
+                    span {
+                      margin-left: 0.5rem;
+                    }
+                    &.disabledbutton {
+                      pointer-events: none;
+                      opacity: 0.4;
+                    }
+                  }
+                }
+              }
             }
           }
           .main_informacion {
             background-color: $color-principal;
             border-left: 1px solid $borde_panel_collapse;
-            // margin-left: 15rem;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
             .content_navegacion_tabs {
               .navegacion_tabs {
                 display: flex;
@@ -666,23 +727,26 @@ body {
                 position: relative;
                 li {
                   list-style: none;
-                  padding-top: 10px;
-
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 0px 10px;
                   &:hover {
                     background-color: $color-main;
                   }
                   button {
                     width: 100%;
                     border: none;
-                    padding: 0 10px;
+                    height: 100%;
                     outline: none;
-                    padding-bottom: 10px;
+
                     background: none;
                     cursor: pointer;
                     font-family: $fuente-principal;
                     &.active_button_tab {
                       color: #ffd608;
                       border-bottom: 3px solid #3283dfb9;
+                      line-height: 2rem;
                     }
                   }
                 }
@@ -732,7 +796,7 @@ body {
                 opacity: 0;
                 transition: all 0.3s;
                 .box_items_acodeon {
-                  width: 90%;
+                  width: 70%;
                   margin-left: 5%;
                   display: none;
                   &.active_item_acordeon {
@@ -740,27 +804,70 @@ body {
                   }
                   .container_button {
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    width: 100%;
+                    flex-direction: column;
                     margin-bottom: $margin-botton-panel;
-                    &.school {
-                      width: 350px;
+                    &.select_button_content {
+                      margin-bottom: 0;
                     }
-                    &.region {
-                      width: 200px;
-                    }
-                    .select_button_school {
-                      width: 280px;
+                    .select_button {
                       background: $color-button-acordeon;
                       border-top-left-radius: 5px;
                       border-top-right-radius: 5px;
                       border-bottom: $borde-aside;
                       display: flex;
                       justify-content: space-between;
+                      &.school_button {
+                        width: 280px;
+                      }
                       &:hover {
                         cursor: pointer;
                         background-color: #d8d8d8;
                       }
+                    }
+                    li {
+                      list-style: none;
+                      margin-bottom: $margin-botton-panel;
+
+                      &.lista_religion {
+                        width: 200px;
+
+                        &.activa_submenu_combo {
+                          background-color: $color-principal;
+                          border: none;
+                          box-shadow: $shadow;
+                          border-radius: 10px;
+                          padding: 10px 0;
+                          overflow: visible !important;
+
+                          &.lista_religion .religion {
+                            background: transparent;
+                            border: none;
+                          }
+                        }
+                        .submenu_combo_desplegable {
+                          margin: 0;
+                          padding-left: 10%;
+
+                          li {
+                            padding: 10px 10px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            &:hover {
+                              background-color: $aside_hover;
+                            }
+                            p {
+                              color: $color-icons;
+                              font-size: 0.8rem;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    .school {
+                      width: 350px;
+                      display: flex;
+                      justify-content: space-between;
                     }
                   }
 

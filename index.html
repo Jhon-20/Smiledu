@@ -214,16 +214,18 @@
                 ><input type="text" placeholder="Buscar estudiante" />
               </div>
               <div class="search_icons">
-                <span
+                <span class="button_hover"
                   ><img src="assets/icons/iconInputLabel.svg" alt=""
                 /></span>
-                <span><img src="assets/icons/iconDropRigth.svg" alt="" /></span>
+                <span class="button_hover"
+                  ><img src="assets/icons/iconDropRigth.svg" alt=""
+                /></span>
               </div>
             </div>
             <div class="text_filter">
               <span
                 >Filtro:
-                <p>premium college-surco</p>
+                <p class="premium_collage">premium college-surco</p>
               </span>
             </div>
             <div class="search_students">
@@ -232,10 +234,7 @@
             <div class="content_anho_lectivo">
               <div class="item_icon">
                 <li>
-                  <button
-                    href="#"
-                    class="button_anho items_desplegable sub_menu"
-                  >
+                  <button class="button_anho items_desplegable sub_menu">
                     <div class="content_anho">
                       <span class="text_aside">Año Lectivo 2020</span>
                       <span class="icon_drop" id="icon_drop"
@@ -243,7 +242,10 @@
                       /></span>
                     </div>
                   </button>
-                  <ul class="content_submenu_nav_aside colapse content_submenu">
+                  <ul
+                    id="colapse"
+                    class="content_submenu_nav_aside colapse content_submenu"
+                  >
                     <li class="list_submenu">
                       <button class="items_desplegable sub_menu button_submenu">
                         3añ. Inicial
@@ -309,8 +311,10 @@
                 </li>
               </div>
               <div class="icons_anho">
-                <span><img src="assets/icons/iconPenAdd.svg" alt="" /> </span>
-                <span
+                <span class="button_hover"
+                  ><img src="assets/icons/iconPenAdd.svg" alt="" />
+                </span>
+                <span class="button_hover"
                   ><img src="assets/icons/iconInputLabel.svg" alt=""
                 /></span>
               </div>
@@ -336,7 +340,7 @@
                         </div>
                       </div>
                     </div>
-                    <span class="icon_label"
+                    <span class="icon_label button_hover" id="icon_label"
                       ><img src="assets/icons/iconLabel.svg" alt=""
                     /></span>
                   </div>
@@ -350,7 +354,7 @@
                     </li>
                     <li class="item_dates">
                       <span>Sede</span>
-                      <span>premium college-surco</span>
+                      <span class="premium_collage">premium college-surco</span>
                     </li>
                     <li class="item_dates">
                       <span>Grado</span>
@@ -366,7 +370,7 @@
                       <p>Matricular</p>
                     </div>
                     <div class="matricula_details">
-                      <div class="buton_combo">
+                      <div class="buton_combo hover_shadow">
                         <span class="button_icons_desplegable"
                           ><img
                             src="assets/icons/iconMatriculaDetail.svg"
@@ -381,10 +385,10 @@
                         <p>Año lectivo</p>
                       </div>
                       <div class="icon_matricula">
-                        <span>
+                        <span class="button_hover">
                           <img src="assets/icons/iconButtonRows.svg" alt=""
                         /></span>
-                        <span
+                        <span class="button_hover"
                           ><img src="assets/icons/iconDelete.svg" alt=""
                         /></span>
                       </div>
@@ -406,7 +410,7 @@
                           ><img src="assets/images/hermanos02.png" alt=""
                         /></span>
                       </div>
-                      <div class="buton_combo add_image_brother">
+                      <div class="buton_combo hover_shadow add_image_brother">
                         <span
                           ><img src="assets/icons/iconUserAdd.svg" alt=""
                         /></span>
@@ -427,6 +431,111 @@
                       <span
                         ><img src="assets/images/UserDefault.png" alt=""
                       /></span>
+                    </div>
+                  </div>
+                  <div class="detail_poppup">
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img src="assets/icons/iconFmaili.svg" alt="" />
+                          </div>
+                          <span class="text_aside">Unir familia</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="
+                            item_icon_link
+                            items_desplegable
+                            button_poppup
+                            disabledbutton
+                          "
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img src="assets/icons/iconUserPoppup.svg" alt="" />
+                          </div>
+                          <span class="text_aside">Activar estudiante</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img
+                              src="assets/icons/iconDisabledUser.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span class="text_aside">Desactivar estudiante</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img
+                              src="assets/icons/iconDeclarationFather.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span class="text_aside">Declaración del padre</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img src="assets/icons/iconButtonRows.svg" alt="" />
+                          </div>
+                          <span class="text_aside">Transaladar estudiante</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img
+                              src="assets/icons/iconSolicitudDates.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span class="text_aside"
+                            >Solicitud de act. datos</span
+                          >
+                        </button>
+                      </li>
+                    </div>
+                    <div class="item_icon active_item">
+                      <li>
+                        <button
+                          class="item_icon_link items_desplegable button_poppup"
+                        >
+                          <div class="icon_nav_aside icon_details_poppup">
+                            <img
+                              src="assets/icons/iconButtonRowDown.svg"
+                              alt=""
+                            />
+                          </div>
+                          <span class="text_aside">Ficha de datos</span>
+                        </button>
+                      </li>
                     </div>
                   </div>
                 </div>
@@ -495,45 +604,88 @@
                       </h4>
                       <article class="accordion__content">
                         <div class="box_items_acodeon">
-                          <div class="container_button school">
-                            <button
-                              class="
-                                items_desplegable
-                                sub_menu
-                                select_button_school
-                              "
-                            >
-                              <span> Selecc. colegio de referencia </span>
-                              <span class="icon_drop" id="icon_drop"
-                                ><img src="assets/icons/iconDrop.svg" alt=""
-                              /></span>
-                            </button>
-                            <div class="buton_combo">
-                              <span class="button_icons_desplegable"
-                                ><img
-                                  src="assets/icons/iconButtonPen.svg"
-                                  alt=""
-                              /></span>
-                            </div>
-                          </div>
-                          <div class="container_button region">
-                            <button
-                              class="
-                                items_desplegable
-                                sub_menu
-                                select_button_school
-                              "
-                            >
-                              <span> Selecc. Region </span>
-                              <span class="icon_drop" id="icon_drop"
-                                ><img src="assets/icons/iconDrop.svg" alt=""
-                              /></span>
-                            </button>
-                          </div>
+                          <ul class="container_button select_button_content">
+                            <li>
+                              <div class="school">
+                                <button
+                                  class="
+                                    items_desplegable
+                                    sub_menu
+                                    select_button
+                                    school_button
+                                  "
+                                >
+                                  <span> Selecc. colegio de referencia </span>
+                                  <span class="icon_drop" id="icon_drop"
+                                    ><img
+                                      src="assets/icons/iconDrop.svg"
+                                      alt=""
+                                  /></span>
+                                </button>
+                                <div class="buton_combo hover_shadow">
+                                  <span class="button_icons_desplegable"
+                                    ><img
+                                      src="assets/icons/iconButtonPen.svg"
+                                      alt=""
+                                  /></span>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="lista_religion">
+                              <div
+                                class="container_button select_button_content"
+                              >
+                                <button
+                                  class="
+                                    items_desplegable
+                                    sub_menu
+                                    select_button
+                                    religion
+                                  "
+                                >
+                                  <span> Selecc. Religión </span>
+                                  <span class="icon_drop" id="icon_drop"
+                                    ><img
+                                      src="assets/icons/iconDrop.svg"
+                                      alt=""
+                                  /></span>
+                                </button>
+                                <ul
+                                  class="
+                                    content_submenu_nav_aside
+                                    sub_menu_modal
+                                    colapse
+                                    submenu_combo_desplegable
+                                  "
+                                >
+                                  <li>
+                                    <p class="sub_menu_aside_text">
+                                      Adventista
+                                    </p>
+                                  </li>
+                                  <li>
+                                    <p class="sub_menu_aside_text">Católico</p>
+                                  </li>
+                                  <li>
+                                    <p class="sub_menu_aside_text">Cristiano</p>
+                                  </li>
+                                  <li>
+                                    <p class="sub_menu_aside_text">
+                                      Evangélica
+                                    </p>
+                                  </li>
+                                  <li>
+                                    <p class="sub_menu_aside_text">Judía</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
                           <div class="pregunt one_pregunt">
                             <p>¿Quienes pueden recoger al estudiante?</p>
                             <div class="add_responsable one_responsable">
-                              <div class="buton_combo">
+                              <div class="buton_combo hover_shadow">
                                 <span class="button_icons_desplegable"
                                   ><img
                                     src="assets/icons/iconUserAdd.svg"
@@ -551,7 +703,7 @@
                                   class="
                                     items_desplegable
                                     sub_menu
-                                    select_button_school
+                                    select_button
                                   "
                                 >
                                   <span> Selecc. colegio de referencia </span>
@@ -572,7 +724,7 @@
               </section>
             </section>
             <section class="content_button_add">
-              <button class="button_add">
+              <button class="button_add hover_shadow">
                 <span><img src="assets/icons/iconButtonAdd.svg" alt="" /></span>
               </button>
               <div class="box_button_icons">
