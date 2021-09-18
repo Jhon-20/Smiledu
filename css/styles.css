@@ -1036,6 +1036,7 @@ body {
 }
 .container .content main .container_table .table_modal {
   border-collapse: collapse;
+  margin-bottom: 1em;
 }
 .container .content main .container_table .table_modal tr {
   border-bottom: 1px solid #adadad;
@@ -1053,6 +1054,41 @@ body {
   text-align: inherit;
   font-size: 0.9rem;
   padding: 0.5rem;
+}
+.container .content main .container_table .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content main .container_table .pagination p {
+  font-size: 0.8em;
+}
+.container .content main .container_table .pagination .combo_pagination {
+  margin-left: 1rem;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content main .container_table .pagination .combo_pagination ul {
+  width: 100%;
+}
+.container .content main .container_table .pagination .combo_pagination ul li {
+  list-style: none;
+}
+.container .content main .container_table .pagination .combo_pagination ul li button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #adadad;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  background-color: transparent;
+  border-bottom: 1px solid #adadad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -86,7 +86,6 @@ const accordionTitle = document.querySelectorAll(".accordion__title"),
 // eventos para los titulos
 for (let i = 0; i < accordionTitle.length; i++) {
   const title = accordionTitle[i];
-
   title.addEventListener("click", () => {
     const index = i;
     accordionTitle[index].classList.toggle("active");
@@ -95,7 +94,6 @@ for (let i = 0; i < accordionTitle.length; i++) {
       if (f !== i) {
         accordionTitle[f].classList.remove("active");
         accordionContent[f].classList.remove("active");
-
       }
     }
   });

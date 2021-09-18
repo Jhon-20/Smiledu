@@ -1127,7 +1127,7 @@ body {
         }
         .table_modal {
           border-collapse: collapse;
-
+          margin-bottom: $margin-botton-panel;
           tr {
             border-bottom: 1px solid $borde_panel_collapse;
             th {
@@ -1144,6 +1144,41 @@ body {
 
               font-size: 0.9rem;
               padding: 0.5rem;
+            }
+          }
+        }
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-size: 0.8em;
+          }
+          .combo_pagination {
+            margin-left: 1rem;
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul {
+              width: 100%;
+              li {
+                list-style: none;
+                button {
+                  cursor: pointer;
+                  width: 100%;
+                  border: none;
+                  outline: none;
+                  color: $borde_panel_collapse;
+                  font-size: 1rem;
+                  font-family: $fuente-principal;
+                  background-color: transparent;
+                  border-bottom: 1px solid $borde_panel_collapse;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+              }
             }
           }
         }
