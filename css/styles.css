@@ -70,9 +70,6 @@ body {
 .container .content .item_icon li .item_icon_link {
   cursor: pointer;
 }
-.container .content .item_icon li.resize_submenu {
-  display: none;
-}
 .container .content .item_icon li .list_submenu {
   width: 100%;
   display: flex;
@@ -101,18 +98,21 @@ body {
 .container .content .content_submenu_nav_aside {
   width: 80%;
   height: 0;
-  margin-left: 15%;
+  margin-left: 17%;
   transition: all 0.3s;
 }
 .container .content .content_submenu_nav_aside.colapse {
   overflow: hidden;
+}
+.container .content .content_submenu_nav_aside.resize_submenu {
+  display: none;
 }
 .container .content .buton_combo {
   width: 40px;
   height: 40px;
   background-color: #ffffff;
   border-radius: 50%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,6 +128,7 @@ body {
   padding: 5px 1em;
   border-radius: 30px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .container .content .button_hover {
   width: 24px;
@@ -300,6 +301,17 @@ body {
   transition: all 0.2s;
   min-height: 100%;
 }
+.container .content main.before {
+  position: relative;
+}
+.container .content main.before:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.479);
+  z-index: 2;
+}
 .container .content main.resize_main {
   width: calc(100% - 4.25rem);
   margin-left: 4.25rem;
@@ -450,6 +462,7 @@ body {
 .container .content main .contnet_panel_collapse .content_anho_lectivo .item_icon .content_submenu .list_submenu .sub_menu_modal {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 .container .content main .contnet_panel_collapse .content_anho_lectivo .item_icon .content_submenu .list_submenu .sub_menu_modal .sub_menu_aside_text.one {
   text-transform: uppercase;
@@ -521,6 +534,43 @@ body {
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .avatar_colapse .icon_label {
   cursor: pointer;
 }
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .collapse_container_informacion {
+  position: absolute;
+  top: 40px;
+  width: 20px;
+  height: 40px;
+  margin-left: 0.7em;
+  transition: all 0.2s;
+  right: 0;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .collapse_container_informacion:hover {
+  width: 40px;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .collapse_container_informacion .button_collapse_info {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  right: 0;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 100px 0 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .collapse_container_informacion .button_collapse_info span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .collapse_container_informacion .button_collapse_info span img {
+  width: 100%;
+  height: 100%;
+}
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .title_student p {
   color: #747474;
   font-size: 0.9rem;
@@ -544,6 +594,10 @@ body {
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .dates_students .item_dates .student {
   color: #0051ff;
   border: 1px solid #0051ff;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .dates_students .item_dates .student:hover {
+  background-color: #0051ff;
+  color: #ffffff;
 }
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .matricula .matricula_details {
   display: flex;
@@ -584,6 +638,10 @@ body {
   color: #ffd600;
   border: 1px solid #ffd600;
   width: 140px;
+}
+.container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .matricula .matricula_school .aulas:hover {
+  background-color: #ffd600;
+  color: #ffffff;
 }
 .container .content main .container_informacion .content_informacion .collapse_informacion .content_colpse_details .brothers .content_images_icon {
   display: flex;
@@ -887,6 +945,114 @@ body {
 .container .content main .container_informacion .content_button_add .box_button_icons.active_icons_button {
   visibility: visible;
   height: 300px;
+}
+.container .content main .footer_leyenda {
+  width: calc(100% - 20rem);
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20rem;
+  padding: 20px 0;
+  font-size: 0.8rem;
+}
+.container .content main .footer_leyenda .list_footer {
+  display: flex;
+}
+.container .content main .footer_leyenda .list_footer li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-left: 1rem;
+}
+.container .content main .footer_leyenda .list_footer li .circle_fotter {
+  display: flex;
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  margin-right: 0.5em;
+}
+.container .content main .footer_leyenda .list_footer li .circle_fotter.gren {
+  background-color: #3dc64d;
+}
+.container .content main .footer_leyenda .list_footer li .circle_fotter.red {
+  background-color: red;
+}
+.container .content main .footer_leyenda .list_footer li .circle_fotter.gray {
+  background-color: #747474;
+}
+.container .content main .footer_leyenda .list_footer li .circle_fotter.blue {
+  background-color: #0051ff;
+}
+.container .content main .container_table {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14), 0 2px 16px 1px rgba(0, 0, 0, 0.12);
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #adadad;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+.container .content main .container_table .header_container_table {
+  display: flex;
+  justify-content: space-between;
+}
+.container .content main .container_table .header_container_table h4 {
+  font-weight: 400;
+}
+.container .content main .container_table .header_container_table span {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.container .content main .container_table .header_container_table span img {
+  width: 100%;
+  height: 100%;
+}
+.container .content main .container_table .avatar_table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+.container .content main .container_table .avatar_table .icon_avatar_table {
+  width: 40px;
+  height: 40px;
+}
+.container .content main .container_table .avatar_table .icon_avatar_table img {
+  width: 100%;
+  height: 100%;
+}
+.container .content main .container_table .avatar_table .text_avatar_table {
+  font-size: 0.9rem;
+  margin-left: 0.5em;
+}
+.container .content main .container_table .table_modal {
+  border-collapse: collapse;
+}
+.container .content main .container_table .table_modal tr {
+  border-bottom: 1px solid #adadad;
+}
+.container .content main .container_table .table_modal tr th {
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  text-align: inherit;
+}
+.container .content main .container_table .table_modal .section_modal {
+  width: 50px;
+}
+.container .content main .container_table .table_modal .section_modal td {
+  text-align: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -18,6 +18,9 @@ let iconButtonAdd = document.querySelector(".button_add");
 const iconLabel = document.getElementById("icon_label")
 const religion = document.querySelectorAll(".religion")
 const listaReligion = document.querySelector(".lista_religion");
+const aulas = document.querySelector(".aulas");
+const table = document.querySelector(".container_table")
+const close = document.querySelector(".close")
 /************ASIDE*****************/
 iconHamburguer.onclick = function () {
   logo.classList.toggle("resize_logo");
@@ -30,6 +33,17 @@ iconHamburguer.onclick = function () {
     textos.classList.toggle("resize_text");
   }
 };
+aulas.onclick = () => {
+  table.style.visibility = "visible"
+  table.style.opacity = "1"
+  main_container.classList.add("before")
+}
+close.onclick = () => {
+  table.style.visibility = "hidden"
+  table.style.opacity = "0"
+  main_container.classList.remove("before")
+}
+
 /***************SUB MENU*************** */
 for (let i = 0; i < subMenuBtn.length; i++) {
   subMenuBtn[i].addEventListener("click", function () {
@@ -38,6 +52,8 @@ for (let i = 0; i < subMenuBtn.length; i++) {
     if (subMenu.classList.contains("desplegar")) {
       subMenu.classList.remove("desplegar");
       subMenu.removeAttribute("style");
+    } else if (aside.classList.contains("resize")) {
+      subMenu.classList.remove("desplegar");
     } else {
       subMenu.classList.add("desplegar");
       subMenu.style.height = heigtSubMenu + "px";
